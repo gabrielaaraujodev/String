@@ -1,0 +1,6 @@
+C:\Users\1499020\source\repos\Exercicio1\Exercicio2\bin\Debug\Exercicio2.exe.config
+C:\Users\1499020\source\repos\Exercicio1\Exercicio2\bin\Debug\Exercicio2.exe
+C:\Users\1499020\source\repos\Exercicio1\Exercicio2\bin\Debug\Exercicio2.pdb
+C:\Users\1499020\source\repos\Exercicio1\Exercicio2\obj\Debug\Exercicio2.csproj.CoreCompileInputs.cache
+C:\Users\1499020\source\repos\Exercicio1\Exercicio2\obj\Debug\Exercicio2.exe
+C:\Users\1499020\source\repos\Exercicio1\Exercicio2\obj\Debug\Exercicio2.pdb
