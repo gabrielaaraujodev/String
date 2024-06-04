@@ -4,22 +4,42 @@ class Program
 {
     static string IntercalaString(string primeiraPalavra, string segundaPalavra)
     {
-        for (int i = 1; i < primeiraPalavra.Length; i = i + 2)
+        string newString = "";
+        int indexPrimeiraPalavra = 0;
+        int indexSegundaPalavra = 0;
+        bool control = true;
+        string troca = "";
+
+        if (primeiraPalavra.Length < segundaPalavra.Length)
         {
-            primeiraPalavra = primeiraPalavra.Replace(primeiraPalavra[i], ' ');
+            troca = primeiraPalavra;
+            primeiraPalavra = segundaPalavra;
+            segundaPalavra = troca;
         }
 
-        foreach (char letra in primeiraPalavra)
+        do
         {
-            if (letra == ' ')
+            if (indexSegundaPalavra < segundaPalavra.Length)
             {
-
+                newString += primeiraPalavra[indexPrimeiraPalavra].ToString() + segundaPalavra[indexSegundaPalavra].ToString();
+                indexPrimeiraPalavra++;
+                indexSegundaPalavra++;
+            } else if (indexPrimeiraPalavra < primeiraPalavra.Length)
+            {
+                newString += primeiraPalavra[indexPrimeiraPalavra];
+                indexPrimeiraPalavra++;
             }
-        }
 
-        Console.WriteLine(primeiraPalavra);
+            if(indexPrimeiraPalavra >= primeiraPalavra.Length && indexSegundaPalavra >= segundaPalavra.Length)
+            {
+                control = false;
+            }
 
-        return "";
+
+        } while (control);
+
+        return newString;
+ 
     }
 
 
@@ -33,7 +53,7 @@ class Program
         Console.WriteLine("Informe a 2ª palavra: ");
         string segundaPalavra = Console.ReadLine();
 
-        IntercalaString(primeiraPalavra, segundaPalavra);
+        Console.WriteLine($"As strings intercaladas geram a seguinte palavra: {IntercalaString(primeiraPalavra, segundaPalavra)}"); 
 
         Console.ReadLine();
     }

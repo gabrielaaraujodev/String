@@ -4,20 +4,23 @@ class Program
 {
     static int CountFilesWithExtension(string[] files, string extension)
     {
-        int count = 0;
-        foreach (string file in files)
+        int cont = 0;
+        for (int i = 0; i < files.Length; i++)
         {
-            if (file.EndsWith(extension, StringComparison.OrdinalIgnoreCase))
+            if (files[i].EndsWith(extension))
             {
-                count++;
+                cont++;
             }
         }
-        return count;
+
+        return cont;
     }
     static void Main(string[] args)
     {
         string[] files = { "document.txt", "image.jpg", "data.csv", "script.js" };
-        string extension = ".txt";
+        Console.WriteLine("Informa o nome da extensão do arquivo desejado: ");
+        string extension = Console.ReadLine();
+
         int count = CountFilesWithExtension(files, extension);
         Console.WriteLine($"Número de arquivos com a extensão '{extension}': {count}");
         Console.ReadLine();
